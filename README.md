@@ -1,5 +1,3 @@
-# SPORTS NOW
+# WHATS FOR LUNCH?
 
-Rails/React app utilizing the ESPN API for sports scheduling.
-
-Updates inc
+Office lunch voting app built in Rails / (exploring Vue.js)

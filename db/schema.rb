@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170824020556) do
 
   create_table "restuarants", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "employee_id", default: 0, null: false
+    t.integer "employee_id", null: false
     t.boolean "optional", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

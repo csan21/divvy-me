@@ -1,0 +1,33 @@
+header {
+  width: 100%;
+  background-color: #777;
+  height: 100px;
+  position: static;
+  margin: 0 auto;
+}
+
+nav {
+  @extend header;
+  width: 90%;
+
+  > .nav-links {
+    list-style-type: none;
+    float: right;
+    margin: 0 auto;
+    display: inline-block;
+
+    > li {
+      margin-top: 15px;
+      float: right;
+      padding: 30px;
+
+      > a {
+        text-decoration: none;
+        color: lightsteelblue;
+      }
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

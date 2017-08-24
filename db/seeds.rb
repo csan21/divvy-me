@@ -1,8 +1,8 @@
-Employee.create(username: "Chris", password_digest: "Hello")
-Employee.create(username: "Mark", password_digest: "Hello")
-Employee.create(username: "Evan", password_digest: "Hello")
-Employee.create(username: "Tony", password_digest: "Hello")
-Employee.create(username: "Jess", password_digest: "Hello")
+Employee.create(username: "Chris", password: "123")
+Employee.create(username: "Mark", password: "123")
+Employee.create(username: "Evan", password: "123")
+Employee.create(username: "Tony", password: "123")
+Employee.create(username: "Jess", password: "123")
 
 Restuarant.create(name: "Chipotle", employee_id: 0, optional: false)
 Restuarant.create(name: "Taco Madre", employee_id: 0, optional: false)

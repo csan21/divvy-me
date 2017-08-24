@@ -1,18 +1,18 @@
 module SessionsHelper
   def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
+    @current_user ||= Employee.find_by(id: session[:employee_id])
   end
 
   def logged_in?
     !!current_user
   end
 
-  def set_session(user)
-    session[:user_id] = user.id
+  def set_session(employee)
+    session[:employee_id] = employee.id
   end
 
   def delete_session
-    session.delete(:user_id)
+    session.delete(:employee_id)
     @current_user = nil
   end
 end

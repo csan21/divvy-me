@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824020556) do
-
-  create_table "employees", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "password_digest", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20170825214402) do
 
   create_table "items", force: :cascade do |t|
     t.string "meal", null: false
@@ -27,14 +20,21 @@ ActiveRecord::Schema.define(version: 20170824020556) do
 
   create_table "restuarants", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "employee_id", null: false
+    t.integer "creator_id", null: false
     t.boolean "optional", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "username", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "votes", force: :cascade do |t|
-    t.integer "employee_id", null: false
+    t.integer "voter_id", null: false
     t.integer "restuarant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

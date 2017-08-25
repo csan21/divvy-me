@@ -1,17 +1,15 @@
 class SessionsController < ApplicationController
-  include SessionsHelper
 
   def new
   end
 
   def create
-    @employee = Employee.find_by(email: params[:session][:username])
-    @errors = []
-    if @employee && @employee.authenticate(params[:session][:password])
-      set_session(@employee)
+    employee = Employee.find_by(email: params[:session][:username])
+    if employee && employee.authenticate(params[:session][:password])
+      set_session employee
       redirect_to root_path
     else
-      @errors << "Invalid username and password combination"
+      flash.now[:danger] = 'Invalid username/password combination'
       render :new
     end
   end

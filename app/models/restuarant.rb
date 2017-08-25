@@ -1,5 +1,5 @@
 class Restuarant < ApplicationRecord
-  belongs_to :employee
+  belongs_to :user
   has_many :votes
   has_many :items
 

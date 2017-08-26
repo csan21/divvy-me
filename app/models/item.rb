@@ -1,4 +1,4 @@
 class Item < ApplicationRecord
-  belongs_to :employee
+  belongs_to :user
   belongs_to :restuarant
 end

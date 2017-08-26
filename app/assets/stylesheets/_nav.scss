@@ -1,7 +1,7 @@
 header {
   width: 100%;
   background-color: #777;
-  height: 100px;
+  height: 5em;
   position: static;
   margin: 0 auto;
 }
@@ -17,9 +17,8 @@ nav {
     display: inline-block;
 
     > li {
-      margin-top: 15px;
       float: right;
-      padding: 30px;
+      padding: 2em;
 
       > a {
         text-decoration: none;

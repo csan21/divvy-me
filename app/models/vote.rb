@@ -1,4 +1,4 @@
 class Vote < ApplicationRecord
-  belongs_to :employee
+  belongs_to :voter, class_name: :User
   belongs_to :restuarant
 end

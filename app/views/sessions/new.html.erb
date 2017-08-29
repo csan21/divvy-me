@@ -3,6 +3,8 @@
     <% provide(:title, "Log in") %>
     <h1>Log in</h1>
 
+    <%= flash.now[:notice] %>
+
     <%= form_for(:session, url: login_path) do |f| %>
       <%= f.label :username %>
       <%= f.text_field :username, class: 'form-field' %>

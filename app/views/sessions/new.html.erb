@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="content">
+    <% provide(:title, "Log in") %>
+    <h1>Log in</h1>
+
+    <%= flash.now[:notice] %>
+
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-field' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-field' %>
+
+      <%= f.submit "Log in", class: "login-button" %>
+    <% end %>
+  </div>
+</div>

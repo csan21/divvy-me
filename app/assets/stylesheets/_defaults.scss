@@ -1,5 +1,10 @@
-body {
+$font: 'Raleway', sans-serif;
+
+body,
+html {
   background-color: #444;
+  font-family: $font;
+  font-size: 1em;
 }
 
 .container {

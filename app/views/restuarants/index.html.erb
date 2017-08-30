@@ -1,9 +1,7 @@
-<div class="container">
-  <div class="content">
-    <ul>
-    <% @all_restuarants.each do |restuarant| %>
-      <li><%= restuarant.name %></li>
-      <% end %>
-    </ul>
-  </div>
+<div class="restuarants-content">
+  <ul>
+  <% @all_restuarants.each do |restuarant| %>
+    <li><%= restuarant.name %></li>
+    <% end %>
+  </ul>
 </div>

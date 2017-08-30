@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       set_session user
       redirect_to root_path
     else
-      flash.now[:notice] = 'Invalid username/password combination'
+      flash.now[:error] = 'Invalid username/password combination'
       render :new
     end
   end

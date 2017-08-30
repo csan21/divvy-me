@@ -1,24 +1,22 @@
-header {
-  width: 100%;
+nav {
+  width: 70%;
   background-color: #777;
-  height: 6em;
+  height: 5.5em;
   position: static;
   margin: 0 auto;
-}
-
-nav {
-  @extend header;
-  width: 90%;
 
   > .nav-links {
+    width: 100%;
     list-style-type: none;
     float: right;
     margin: 0 auto;
     display: inline-block;
+    box-sizing: border-box;
 
     > li {
       float: right;
       padding: 2em;
+      box-sizing: border-box;
 
       > a {
         text-decoration: none;

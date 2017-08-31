@@ -1,9 +1,9 @@
 $font: 'Raleway', sans-serif;
-$pattern-bg: url('../assets/images/tiles.jpg') repeat center center;
+$pattern-bg: image_url('tiles.jpg') repeat;
 
 body,
 html {
-  background-color: #333;
+  background-color: #222;
   font-family: $font;
   font-size: 1em;
 }
@@ -11,7 +11,7 @@ html {
 .container {
   margin: 0 auto;
   width: 70%;
-  background-color: white;
+  background-color: lightgrey;
 }
 
 .content {

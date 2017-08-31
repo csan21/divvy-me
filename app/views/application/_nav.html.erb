@@ -1,10 +1,16 @@
 
   <nav>
-    <ul class="nav-links">
+    <ul class='nav-links'>
       <% if logged_in? %>
+        <li class='logo'>
+          <%= image_tag 'logo.svg', class: 'app-logo' %>
+        </li>
         <li><%= current_user.username %></li>
         <li><%= link_to "Log out", logout_path, method: :delete %></li>
       <% else %>
+        <li class='logo'>
+          <%= image_tag 'logo.svg', class: 'app-logo' %>
+        </li>
         <li><%= link_to "Log in", login_path %></li>
       <% end %>
     </ul>

@@ -1,6 +1,9 @@
+@import 'defaults';
+
 nav {
   width: 70%;
   background-color: #777;
+  background: $pattern-bg;
   height: 5.5em;
   position: static;
   margin: 0 auto;
@@ -13,15 +16,49 @@ nav {
     display: inline-block;
     box-sizing: border-box;
 
+    > li:first-child {
+      float: left;
+    }
+
     > li {
       float: right;
       padding: 2em;
       box-sizing: border-box;
+      color: white;
 
       > a {
         text-decoration: none;
-        color: tomato;
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+          color: dodgerblue;
+        }
       }
     }
+  }
+}
+
+.logo {
+  box-sizing: border-box;
+  padding: 100px;
+  height: auto;
+  width: auto;
+}
+
+.app-logo {
+  animation: app-logo-spin 15s linear infinite;
+  height: 3.5em;
+  width: 3.5em;
+  margin-bottom: -40%;
+  margin-top: -40%;
+}
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

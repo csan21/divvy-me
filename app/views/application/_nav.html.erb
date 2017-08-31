@@ -1,17 +1,16 @@
-
-  <nav>
-    <ul class='nav-links'>
-      <li class='logo'>
-        <%= image_tag 'logo.svg', class: 'app-logo' %>
-      </li>
-      <li class="app-name">
-        <%= link_to 'whats for lunch?', root_path %>
-      </li>
-      <% if logged_in? %>
-        <li><%= link_to "Log out", logout_path, method: :delete %></li>
-        <li><%= current_user.username %></li>
-      <% else %>
-        <li><%= link_to "log in", login_path %></li>
-      <% end %>
-    </ul>
-  </nav>
+<nav>
+  <ul class='nav-links'>
+    <li class='logo'>
+      <%= image_tag 'logo.svg', class: 'app-logo' %>
+    </li>
+    <li class="app-name">
+      <%= link_to 'whats for lunch?', root_path %>
+    </li>
+    <% if logged_in? %>
+    <li><%= link_to "Log out", logout_path, method: :delete %></li>
+    <li><%= current_user.username %></li>
+  <% else %>
+    <li><%= link_to "log in", login_path %></li>
+    <% end %>
+  </ul>
+</nav>

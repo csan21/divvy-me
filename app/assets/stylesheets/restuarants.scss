@@ -2,8 +2,10 @@
 
 .restuarants-content {
   @extend .content;
+  display: grid;
 
   > ul {
+    align-items: center;
     list-style-type: none;
     padding: 0;
     margin: 0;

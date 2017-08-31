@@ -8,16 +8,22 @@ nav {
   position: static;
   margin: 0 auto;
 
-  > .nav-links {
+  > ul.nav-links {
     width: 100%;
     list-style-type: none;
     float: right;
     margin: 0 auto;
-    display: inline-block;
+    display: inline;
     box-sizing: border-box;
 
     > li:first-child {
       float: left;
+      margin-left: -3.5%;
+    }
+
+    > li:nth-child(2) {
+      float: left;
+      font-weight: 600;
     }
 
     > li {
@@ -52,6 +58,10 @@ nav {
   width: 3.5em;
   margin-bottom: -40%;
   margin-top: -40%;
+}
+
+.app-name {
+  font-size: 1em;
 }
 
 @keyframes app-logo-spin {

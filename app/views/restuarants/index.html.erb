@@ -1,7 +1,10 @@
 <div class="restuarants-content">
   <ul>
-  <% @all_restuarants.each do |restuarant| %>
-    <li><%= restuarant.name %></li>
+  <% @restuarants.each do |restuarant| %>
+  <li>
+    <%= restuarant.name %>
+    <%= button_to 'vote!', votes_path(id: restuarant.id, method: :post) %>
+  </li>
     <% end %>
   </ul>
 </div>

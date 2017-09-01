@@ -1,5 +1,6 @@
 class RestuarantsController < ApplicationController
   def index
-    @all_restuarants = Restuarant.all
+    @restuarants = Restuarant.all
+    @defaults = Restuarant.default_restuarants
   end
 end

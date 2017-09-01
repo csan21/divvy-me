@@ -3,6 +3,7 @@
   <% @restuarants.each do |restuarant| %>
   <li>
     <%= restuarant.name %>
+    <%= restuarant.votes.count %>
     <%= button_to 'vote!', votes_path(id: restuarant.id, method: :post) %>
   </li>
     <% end %>

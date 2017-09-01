@@ -10,10 +10,9 @@
 
 form {
   width: 50%;
+  display: inline-block;
 
   > .form-field {
-    display: block;
-    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 1em;
     box-sizing: border-box;

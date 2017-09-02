@@ -4,9 +4,7 @@
       <li>
         <%= restuarant.name %>
         <%= restuarant.votes.count %>
-          <% if restuarant.creator_id != current_user.id %>
-            <%= button_to 'vote!', votes_path(id: restuarant.id, method: :post) %>
-          <% end %>
+        <%= button_to 'vote!', votes_path(id: restuarant.id, method: :post) %>
       </li>
     <% end %>
   </ul>

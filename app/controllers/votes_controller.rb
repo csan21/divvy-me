@@ -6,7 +6,7 @@ class VotesController < ApplicationController
 
       if vote.check_vote?(vote, restuarant)
         vote.save
-        redirect_to root_path
+        redirect_back(fallback_location: root_path)
       end
     end
   end

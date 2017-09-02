@@ -7,9 +7,6 @@ class VotesController < ApplicationController
       if vote.check_vote?(vote, restuarant)
         vote.save
         redirect_back(fallback_location: root_path)
-      else
-        flash.now[:error] = "Can't vote on your recommendation"
-        redirect_back(fallback_location: root_path)
       end
     end
   end

@@ -1,0 +1,11 @@
+<div class="restaurants-content">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li>
+        <%= restaurant.name %>
+        <%= restaurant.votes.count %>
+        <%= button_to 'vote!', votes_path(id: restaurant.id, method: :post) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

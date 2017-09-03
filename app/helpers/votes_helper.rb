@@ -1,5 +1,5 @@
 module VotesHelper
-  def check_vote?(vote, restuarant)
-    vote.voter_id != restuarant.creator_id
+  def check_vote?(vote, restaurant)
+    vote.voter_id != restaurant.creator_id
   end
 end

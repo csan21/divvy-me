@@ -9,4 +9,8 @@ class Restaurant < ApplicationRecord
   def self.default_choices
     Restaurant.all.select { |restaurant| restaurant[:optional] == false }
   end
+
+  def self.optional_choices
+    Restaurant.all.select { |restaurant| restaurant[:optional] == true }
+  end
 end

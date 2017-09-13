@@ -10,5 +10,13 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    if @restaurant.save
+    end
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :creator_id)
   end
 end
